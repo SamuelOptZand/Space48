@@ -69,17 +69,17 @@ public class ItemHandler : MonoBehaviour
         {
             if (items[activeItemIndex] == Color.blue)
             {
-                StartCoroutine(MSG.ShowMessage("+ Move Speed"));
+                StartCoroutine(MSG.ShowMessage("+ Move Speed", 3f));
                 MoveM.MoveSpeed += 5;
             }
             else if (items[activeItemIndex] == Color.red)
             {
-                StartCoroutine(MSG.ShowMessage("+ Fire Rate"));
+                StartCoroutine(MSG.ShowMessage("+ Fire Rate", 3f));
                 ShootS.CoolDownTime -= 0.1f;
             }
             else if (items[activeItemIndex] == Color.green)
             {
-                StartCoroutine(MSG.ShowMessage("+ Rotation Speed"));
+                StartCoroutine(MSG.ShowMessage("+ Rotation Speed", 3f));
                 MoveM.RotationSpeed += 10;
             }
             items.RemoveAt(activeItemIndex);
